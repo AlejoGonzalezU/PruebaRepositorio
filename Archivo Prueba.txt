@@ -30,3 +30,5 @@ CREATE TABLE series (
   idTipoContenido int,
   FOREIGN KEY (idTipoContenido) REFERENCES contenidos (idContenidos)
 );
+
+Prueba desde Main.
