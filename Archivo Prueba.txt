@@ -1,0 +1,32 @@
+CREATE TABLE usuarios (
+  alias varchar(20) primary key,
+  nombres varchar(30),
+  apellidos varchar(30),
+  email varchar(30),
+  celular varchar(10),
+  contrasena varchar(45),
+  fechaNacimiento date
+);
+
+
+
+CREATE TABLE peliculas (
+  idPeliculas int primary key,
+  titulo varchar(45),
+  resumen varchar(255),
+  ano int,
+  idDirector int,
+  idContenido int,
+  FOREIGN KEY (idContenido) REFERENCES contenidos (idContenidos),
+  FOREIGN KEY (idDirector) REFERENCES directores (id_directores)
+);
+
+
+CREATE TABLE series (
+  idSeries int primary key,
+  titulo varchar(45),
+  numeroTemporadas int,
+  numeroEpisodios int,
+  idTipoContenido int,
+  FOREIGN KEY (idTipoContenido) REFERENCES contenidos (idContenidos)
+);
