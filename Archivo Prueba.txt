@@ -8,8 +8,6 @@ CREATE TABLE usuarios (
   fechaNacimiento date
 );
 
-
-
 CREATE TABLE peliculas (
   idPeliculas int primary key,
   titulo varchar(45),
@@ -20,7 +18,6 @@ CREATE TABLE peliculas (
   FOREIGN KEY (idContenido) REFERENCES contenidos (idContenidos),
   FOREIGN KEY (idDirector) REFERENCES directores (id_directores)
 );
-
 
 CREATE TABLE series (
   idSeries int primary key,
